@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		156EDC7D1E748D3C00CFE30D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 156EDC7C1E748D3C00CFE30D /* main.cpp */; };
+		156EDC851E74949700CFE30D /* MyMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 156EDC841E74949700CFE30D /* MyMap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		156EDC791E748D3C00CFE30D /* BruinNav */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BruinNav; sourceTree = BUILT_PRODUCTS_DIR; };
 		156EDC7C1E748D3C00CFE30D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		156EDC831E748D8900CFE30D /* MyMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMap.h; sourceTree = "<group>"; };
+		156EDC841E74949700CFE30D /* MyMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyMap.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,8 @@
 		156EDC7B1E748D3C00CFE30D /* BruinNav */ = {
 			isa = PBXGroup;
 			children = (
+				156EDC831E748D8900CFE30D /* MyMap.h */,
+				156EDC841E74949700CFE30D /* MyMap.cpp */,
 				156EDC7C1E748D3C00CFE30D /* main.cpp */,
 			);
 			path = BruinNav;
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156EDC851E74949700CFE30D /* MyMap.cpp in Sources */,
 				156EDC7D1E748D3C00CFE30D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
