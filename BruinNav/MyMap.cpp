@@ -27,7 +27,7 @@ template <typename KeyType, typename ValueType>
 MyMap<KeyType, ValueType>::MyMap()
 {
     m_size= 0;
-    m_height= 0;
+    //m_height= 0;
     m_root= nullptr;
 }
 
@@ -40,7 +40,19 @@ MyMap<KeyType, ValueType>::~MyMap()
 template <typename KeyType, typename ValueType>
 void MyMap<KeyType, ValueType>::clear()
 {
-    //will be recursively implemented
+    deleteSubTree(this->m_root);
+}
+
+template <typename KeyType, typename ValueType>
+void MyMap<KeyType, ValueType>::deleteSubtree(Node* n)
+{
+    if(n == nullptr){
+        return;
+    }
+    deleteSubtree(n->left);
+    deleteSubtree(n->right);
+    
+    delete n;
 }
 
 template <typename KeyType, typename ValueType>  //finished
@@ -58,11 +70,48 @@ void MyMap<KeyType, ValueType>::associate(const KeyType& key, const ValueType& v
     }
     else
     {
-        TreeNode t = new TreeNode();
-        t.m_key= key;
-        t.m_value= value;
+        Node n = new Node();
+        n.m_key= key;
+        n.m_value= value;
         ///more implementation necessary
         m_size++;
     }
 }
+
+template <typename KeyType, typename ValueType>
+const ValueType* MyMap<KeyType,ValueType>::find(const KeyType& key) const
+{
+    
+}
+
+template <typename KeyType, typename ValueType>
+ValueType* MyMap<KeyType, ValueType>::find(const KeyType& key)
+{
+    find(key);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

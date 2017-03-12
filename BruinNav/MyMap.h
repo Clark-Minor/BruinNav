@@ -42,25 +42,25 @@ private:
     //  m_root points to the root node of the tree.
     //  if there are no elements in the tree, m_root == nullptr.
     //  the tree is organized according to the the value of m_key stored in every node, where
-    //  KeyType MUST have well-defined behavior for the >, <, and = operators
+    //  KeyType MUST have well-defined behavior for the >, <, <= , >=, !=, and  == operators
     //  for every node to the left of the root, node.m_key < root.m_key and
     //  for every node to the right of the root, node.m_key > root.m_key
     
     int m_size;
-    int m_height; //unsure if this is really necessary
-    struct TreeNode
+    //int m_height; //unsure if this is really necessary
+    struct Node
     {
         KeyType m_key;
         ValueType m_value;
         
-        TreeNode* left;
-        TreeNode* right;
+        Node* left;
+        Node* right;
     };
     
-     TreeNode* m_root;
+     Node* m_root;
     
     void insertNode();
-    void deleteNode();
+    void deleteSubtree(Node* n);
     
     //void setNode(KeyType key, ValueType value);   //turned out not to be useful
     
