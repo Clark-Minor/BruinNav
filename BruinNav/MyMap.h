@@ -48,19 +48,20 @@ private:
     
     int m_size;
     //int m_height; //unsure if this is really necessary
-    struct Node
+    struct TreeNode
     {
         KeyType m_key;
         ValueType m_value;
         
-        Node* left;
-        Node* right;
+        TreeNode* left;
+        TreeNode* right;
     };
     
-     Node* m_root;
+     TreeNode* m_root;
     
     void insertNode();
-    void deleteSubtree(Node* n);
+    void clearSubtree(TreeNode* n);
+    TreeNode* findInSubtree(KeyType key, TreeNode* n);
     
     //void setNode(KeyType key, ValueType value);   //turned out not to be useful
     
